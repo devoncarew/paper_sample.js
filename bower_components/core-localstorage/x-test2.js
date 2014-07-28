@@ -1,1 +1,5 @@
-Polymer('x-test2', {});
+
+      Polymer('x-test2', {
+        mode: false
+      });
+    

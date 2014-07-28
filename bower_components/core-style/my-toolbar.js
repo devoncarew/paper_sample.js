@@ -1,1 +1,2 @@
-Polymer('my-toolbar', {});
+
+  CoreStyle.g.columns = 3;
