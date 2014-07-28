@@ -1,1 +1,0 @@
-Polymer('my-panel', {});
