@@ -5,9 +5,7 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-
-<!--
+--><!--
 `core-toolbar` is a horizontal bar containing elements that can be used for
 label, navigation, search and actions.
 
@@ -49,26 +47,25 @@ with `bottom`.
 @group Polymer Core Elements
 @element core-toolbar
 @homepage github.io
--->
+--><html><head><link rel="import" href="../polymer/polymer.html">
 
-<link rel="import" href="../polymer/polymer.html">
-
-<polymer-element name="core-toolbar" noscript>
+</head><body><polymer-element name="core-toolbar">
 <template>
 
   <link rel="stylesheet" href="core-toolbar.css">
 
-  <div id="bottomBar" class="toolbar-tools" center horizontal layout>
+  <div id="bottomBar" class="toolbar-tools" center="" horizontal="" layout="">
     <content select=".bottom"></content>
   </div>
   
-  <div id="middleBar" class="toolbar-tools" center horizontal layout>
+  <div id="middleBar" class="toolbar-tools" center="" horizontal="" layout="">
     <content select=".middle"></content>
   </div>
 
-  <div id="topBar" class="toolbar-tools" center horizontal layout>
+  <div id="topBar" class="toolbar-tools" center="" horizontal="" layout="">
     <content></content>
   </div>
 
 </template>
-</polymer-element>
+<script src="core-toolbar.js"></script></polymer-element>
+</body></html>

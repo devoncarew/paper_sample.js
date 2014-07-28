@@ -1,4 +1,4 @@
-<link rel="import" href="../../core-layout/core-layout.html">
+<html><head><link rel="import" href="../../core-layout/core-layout.html">
 <link rel="import" href="../../core-toolbar/core-toolbar.html">
 <link rel="import" href="../../core-header-panel/core-header-panel.html">
 <link rel="import" href="../../core-icon-button/core-icon-button.html">
@@ -9,7 +9,7 @@
 @class core-doc-toc
 -->
 
-<polymer-element name="core-doc-toc" attributes="data selected">
+</head><body><polymer-element name="core-doc-toc" attributes="data selected">
 
   <template>
 
@@ -38,22 +38,7 @@
 
   </template>
 
-  <script>
-
-    Polymer('core-doc-toc', {
-
-      searchAction: function() {
-        this.$.searchBar.style.opacity = 1;
-        this.$.searchBar.style.display = '';
-      },
-
-      closeSearchAction: function() {
-        this.$.searchBar.style.opacity = 0;
-        this.$.searchBar.style.display = 'none';
-      }
-
-    });
-
-  </script>
+  <script src="core-doc-toc.js"></script>
 
 </polymer-element>
+</body></html>

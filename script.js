@@ -13,4 +13,9 @@ document.addEventListener('polymer-ready', function() {
     para.appendChild(shadow);
     content.appendChild(para);
   });
+  
+  var search = document.getElementById('searchbutton');
+  search.addEventListener('click', function() {
+    document.querySelector('#toast').show()
+  });
 });

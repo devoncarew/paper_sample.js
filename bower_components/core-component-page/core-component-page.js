@@ -1,0 +1,1 @@
+Polymer('core-component-page', {});

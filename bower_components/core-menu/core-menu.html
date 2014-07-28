@@ -5,9 +5,7 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-
-<!--
+--><!--
 `core-menu` is a selector which styles to looks like a menu.
 
     <core-menu selected="0">
@@ -53,10 +51,9 @@ The `core-select` event signals selection change.
 @group Polymer Core Elements
 @element core-menu
 @extends core-selector
--->
+--><html><head><link rel="import" href="../core-selector/core-selector.html">
 
-<link rel="import" href="../core-selector/core-selector.html">
+<link rel="stylesheet" href="core-menu.css" shim-shadowdom="">
 
-<link rel="stylesheet" href="core-menu.css" shim-shadowdom>
-
-<polymer-element name="core-menu" extends="core-selector" noscript></polymer-element>
+</head><body><polymer-element name="core-menu" extends="core-selector"><script src="core-menu.js"></script></polymer-element>
+</body></html>

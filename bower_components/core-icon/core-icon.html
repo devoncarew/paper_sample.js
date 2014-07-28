@@ -5,8 +5,7 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-<!--
+--><!--
 
 The `core-icon` element displays an icon. By default an icon renders as 24px square.
 
@@ -41,91 +40,12 @@ See [core-icons](http://www.polymer-project.org/components/core-icons/demo.html)
 @group Polymer Core Elements
 @element core-icon
 @homepage polymer.github.io
--->
-<link rel="import" href="../core-iconset/core-iconset.html">
+--><html><head><link rel="import" href="../core-iconset/core-iconset.html">
 
-<link rel="stylesheet" href="core-icon.css" shim-shadowdom>
+<link rel="stylesheet" href="core-icon.css" shim-shadowdom="">
 
-<polymer-element name="core-icon" attributes="src icon">
-<script>
-(function() {
-  
-  // mono-state
-  var meta;
-  
-  Polymer('core-icon', {
-
-    /**
-     * The URL of an image for the icon. If the src property is specified,
-     * the icon property should not be.
-     *
-     * @attribute src
-     * @type string
-     * @default ''
-     */
-    src: '',
-
-    /**
-     * Specifies the icon name or index in the set of icons available in
-     * the icon's icon set. If the icon property is specified,
-     * the src property should not be.
-     *
-     * @attribute icon
-     * @type string
-     * @default ''
-     */
-    icon: '',
-
-    observe: {
-      'icon': 'updateIcon'
-    },
-
-    defaultIconset: 'icons',
-
-    ready: function() {
-      if (!meta) {
-        meta = document.createElement('core-iconset');
-      }
-      this.updateIcon();
-    },
-
-    srcChanged: function() {
-      var icon = this._icon || document.createElement('div');
-      icon.textContent = '';
-      icon.setAttribute('fit', '');
-      icon.style.backgroundImage = 'url(' + this.src + ')';
-      icon.style.backgroundPosition = 'center';
-      icon.style.backgroundSize = '100%';
-      if (!icon.parentNode) {
-        this.appendChild(icon);
-      }
-      this._icon = icon;
-    },
-
-    getIconset: function(name) {
-      return meta.byId(name || this.defaultIconset);
-    },
-
-    updateIcon: function() {
-      if (!this.icon) {
-        return;
-      }
-      var parts = String(this.icon).split(':');
-      var icon = parts.pop();
-      if (icon) {
-        var set = this.getIconset(parts.pop());
-        if (set) {
-          this._icon = set.applyIcon(this, icon);
-          if (this._icon) {
-            this._icon.setAttribute('fit', '');
-          }
-        }
-      }
-    }
-
-  });
-  
-})();
-</script>
+</head><body><polymer-element name="core-icon" attributes="src icon">
+<script src="core-icon.js"></script>
 
 </polymer-element>
+</body></html>

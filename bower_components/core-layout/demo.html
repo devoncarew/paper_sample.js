@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<!--
+<!DOCTYPE html><!--
 Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
 This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
 The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-<html>
-<head>
+--><html><head>
   <title>core-layout demo</title>
 
   <script src="../platform/platform.js"></script>
@@ -26,9 +23,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </style>
 
 </head>
-<body unresolved>
+<body unresolved="">
   
-  <polymer-element name="layout-demo" noscript>
+  <polymer-element name="layout-demo">
     <template>
       <style>
         div, core-layout {
@@ -51,15 +48,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
       </style>
       <core-layout></core-layout>
-      <core-layout core-flex>
+      <core-layout core-flex="">
         <div>Hi I'm some content</div>
-        <core-layout core-flex vertical>
+        <core-layout core-flex="" vertical="">
           <core-layout align="center">
             <h3>Title</h3>
             <button>hello</button>
           </core-layout>
-          <core-layout core-flex>
-            <div core-flex class="core-relative">
+          <core-layout core-flex="">
+            <div core-flex="" class="core-relative">
               Main content
               <div class="abs">abs pos :)</div>
             </div>
@@ -73,10 +70,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <div>A last bit, like a panel</div>
       </core-layout>
     </template>
-  </polymer-element>
+  <script src="layout-demo.js"></script></polymer-element>
 
   <h3>core-layout example</h3>
   <layout-demo></layout-demo>
   
-</body>
-</html>
+
+
+</body></html>
